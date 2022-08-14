@@ -4,13 +4,12 @@
     clippy::uninlined_format_args
 )]
 
-mod error;
-mod render;
 mod serve;
 
-use crate::error::Error;
 use clap::{Parser as ClapParser, Subcommand as ClapSubcommand};
 use oqueue::{Color::Red, Sequencer};
+use rust_quiz::error::Error;
+use rust_quiz::render;
 use std::io::{self, Write};
 use std::process;
 
